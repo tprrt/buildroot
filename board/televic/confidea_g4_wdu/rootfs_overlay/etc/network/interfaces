@@ -1,0 +1,9 @@
+# Loopback interface
+auto lo
+iface lo inet loopback
+
+# USB gadget connection
+auto usb0
+iface usb0 inet static
+	address 193.168.1.160
+	netmask 255.255.255.0

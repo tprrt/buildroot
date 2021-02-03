@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# Mount partitions
+#
+
+BOARD=$(cat /etc/board)
+
+case "$1" in
+	start)
+		echo "Mounting partitions..."
+
+		if [ "$BOARD" = "confidea_g4_wdu" ]
+		then
+			/usr/bin/mount_wdu_data.sh
+		fi;
+		;;
+	stop)
+		# umount data partition
+		umount /mnt/data
+		;;
+	*)
+		echo "Usage: $0 {start|stop}"
+		exit 1
+esac
+
+exit $?

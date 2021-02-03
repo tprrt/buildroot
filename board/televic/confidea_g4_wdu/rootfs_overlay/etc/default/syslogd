@@ -1,0 +1,2 @@
+# make syslogd keep 10x1MB instead of 2x200KB
+SYSLOGD_ARGS="-s 1024 -b 10"
