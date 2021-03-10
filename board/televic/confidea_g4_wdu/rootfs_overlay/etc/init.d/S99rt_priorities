@@ -15,7 +15,7 @@ set_priority()
 
 start()
 {
-	set_priority "irq/46-g4-timer" 1 90
+	set_priority "irq/39-g4-timer" 1 90
 }
 
 case "$1" in
