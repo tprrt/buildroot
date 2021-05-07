@@ -15,7 +15,9 @@ set_priority()
 
 start()
 {
-	set_priority "irq/39-g4-timer" 1 90
+	echo "-1" > /proc/sys/kernel/sched_rt_runtime_us
+	echo "2" > /proc/irq/39/smp_affinity
+	set_priority "irq/39-g4-timer" 1 98
 }
 
 case "$1" in

@@ -1,0 +1,29 @@
+From 236e4d1e7a1e516111811ce8ec49c498bc10ce98 Mon Sep 17 00:00:00 2001
+From: Thomas Perrot <thomas.perrot@bootlin.com>
+Date: Wed, 5 May 2021 15:04:28 +0200
+Subject: [PATCH 2/2] ftrace
+
+Signed-off-by: Thomas Perrot <thomas.perrot@bootlin.com>
+---
+ arch/arm/configs/imx7d_televic_defconfig | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm/configs/imx7d_televic_defconfig b/arch/arm/configs/imx7d_televic_defconfig
+index 1c84b56ec9d4..3107498cb217 100644
+--- a/arch/arm/configs/imx7d_televic_defconfig
++++ b/arch/arm/configs/imx7d_televic_defconfig
+@@ -179,7 +179,10 @@ CONFIG_DMA_CMA=y
+ CONFIG_CMA_SIZE_MBYTES=0
+ CONFIG_PRINTK_TIME=y
+ CONFIG_DEBUG_FS=y
+-# CONFIG_FTRACE it not set
++CONFIG_FTRACE=y
++CONFIG_FUNCTION_TRACER=y
++CONFIG_FUNCTION_GRAPH_TRACER=y
++# CONFIG_SCHED_TRACER is not set
+ CONFIG_NR_CPUS=2
+ CONFIG_SCHED_MC=y
+ # CONFIG_CPU_FREQ_GOV_USERSPACE is not set
+-- 
+2.30.2
+
